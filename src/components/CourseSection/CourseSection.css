@@ -1,0 +1,78 @@
+/* Main container for the courses page */
+.courses-page {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f9;
+  }
+  
+  /* Title for the Courses section */
+  .courses-page h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* Container that holds all the course cards */
+  .courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Each course card */
+  .course-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-10px);  /* Elevation effect on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Course image */
+  .course-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* Course title */
+  .course-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* Shortened course description */
+  .course-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  /* Course button */
+  .course-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .course-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  

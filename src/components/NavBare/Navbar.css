@@ -1,0 +1,196 @@
+/* General Styles */
+:root {
+  --primary-color: #2176ad;
+  --secondary-color: #ef1629;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --hover-color: #0056b3;
+  --dropdown-bg-color: #ffffff;
+  --dropdown-border-color: #2176ad;
+  --dropdown-hover-bg-color: #f1f1f1;
+  --button-bg-color: #ef1629;
+  --button-hover-bg-color: #d12f26;
+  --footer-bg-color: #333333;
+  --footer-text-color: #ffffff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Navbar Styling */
+.navbar {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--background-color);
+  color: var(--background-color);
+  position: fixed; /* لجعل الـ navbar ثابتة في أعلى الصفحة */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* لتكون فوق جميع العناصر الأخرى */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Logo */
+.navbar .logo img {
+  max-height: 70px;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 2px solid  var(--background-color);  
+  transition: border-bottom 0.3s ease;
+}
+
+/* عند التمرير على الرابط */
+.nav-links li a:hover {
+  color: var(--hover-color); /* يمكن تغييرها حسب رغبتك */
+  border-bottom: 2px solid var(--secondary-color); /* تظهر خط أسفل الرابط باللون الأحمر */
+}
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+}
+
+.arrow-icon {
+  color: var(--text-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.dropdown:hover .arrow-icon {
+  transform: rotate(180deg);
+  color: var(--background-color);
+}
+
+.services-dropdown, .academic-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--dropdown-bg-color);
+  color: var(--text-color);
+  width: 200px;
+  border: 1px solid var(--dropdown-border-color);
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: var(--dropdown-hover-bg-color);
+}
+
+.dropdown:hover .services-dropdown,
+.dropdown:hover .academic-dropdown {
+  display: block;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Auth Buttons */
+.auth-buttons button {
+  background-color: var(--button-bg-color);
+  color: var(--background-color);
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.auth-buttons button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+/* Mobile Menu */
+.mobile-menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.user-button{
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Show mobile menu icon on smaller screens */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    gap: 0;
+    display: none; /* Hidden by default */
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show when mobile menu is active */
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .nav-links li a {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .mobile-menu-icon {
+    display: block; /* Show on mobile */
+  }
+
+  .dropdown .services-dropdown,
+  .dropdown .academic-dropdown {
+    width: 100%; /* Full width for dropdowns on mobile */
+  }
+
+  .dropdown-item {
+    padding: 15px;
+  }
+}

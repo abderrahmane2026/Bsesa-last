@@ -1,3 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  --primary-color: #2176ad;  /* Blue (from logo) */
+  --secondary-color: #ef1629; /* Red (from logo) */
+  --background-color: #ffffff; /* White (from logo) */
+  --text-color: #333333; /* Dark gray text */
+  --hover-color: #0056b3; /* Darker blue for hover effects */
+  --dropdown-bg-color: #ffffff; /* White background for dropdown */
+  --dropdown-border-color: #2176ad; /* Blue border for dropdown */
+  --dropdown-hover-bg-color: #f1f1f1; /* Light gray on hover */
+  --button-bg-color: #2176ad; /* Blue for button background */
+  --button-hover-bg-color: #0056b3; /* Dark blue for button hover */
+  --footer-bg-color: #333333; /* Dark footer */
+  --footer-text-color: #ffffff; /* White footer text */
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

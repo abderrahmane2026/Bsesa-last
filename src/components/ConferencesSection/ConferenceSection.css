@@ -1,0 +1,73 @@
+/* ستايل الصفحة العامة */
+.conferences-page {
+  padding: 20px;
+  padding-bottom:100px;
+  padding-top:50px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.conference-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.conference-card {
+  width: 400px;
+  height: 500px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.conference-card:hover {
+  transform: translateY(-10px); /* رفع البطاقة عند التمرير */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* زيادة الظل عند التمرير */
+}
+
+.conference-card:hover .conference-info .conference-name {
+  color: #ff6347; /* تغيير لون العنوان عند التمرير */
+}
+
+.conference-card:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: #ff6347; /* إضافة خط أسفل البطاقة عند التمرير */
+  transition: height 0.3s ease;
+}
+
+.conference-card .conference-image {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.conference-info {
+  padding: 15px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.conference-name {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.conference-date {
+  font-size: 1rem;
+  color: #555;
+}
