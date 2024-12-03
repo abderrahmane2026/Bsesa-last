@@ -10,6 +10,7 @@ const ConferenceDetails = () => {
 
   useEffect(() => {
     // استدعاء بيانات المؤتمر من API
+    console.log(conferenceId);
     axios.get(`https://bsesa-backend-1.onrender.com/conference/${conferenceId}`)
       .then(response => {
         setConference(response.data.conference);

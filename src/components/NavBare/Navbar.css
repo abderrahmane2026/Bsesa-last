@@ -79,6 +79,8 @@ body {
 /* Dropdown menu */
 .dropdown {
   position: relative;
+  padding:5px;
+ 
 }
 
 .arrow-icon {
@@ -108,13 +110,15 @@ body {
 }
 
 .dropdown-item {
-  padding: 10px;
+  padding: 10px !important;
   cursor: pointer;
+  border-bottom: 1px solid #d12f26 !important;
   transition: background-color 0.3s ease;
 }
 
 .dropdown-item:hover {
-  background-color: var(--dropdown-hover-bg-color);
+  background-color: var(--dropdown-hover-bg-color) !important;
+  
 }
 
 .dropdown:hover .services-dropdown,

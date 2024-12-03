@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./NewBlogPage.css";
+import "./NewBlogPage.module.css";
 import { useStore } from "../../../Context/testzustand";
 import { useNavigate } from "react-router-dom";
 
@@ -99,7 +99,7 @@ const BlogForm = () => {
         categories: [],
         file: null,
       });
-      navigate("/Blogs",);
+      navigate("/blog",);
     } catch (error) {
       setResponseMessage("Failed to create blog post.");
       console.error("Error:", error);

@@ -6,6 +6,7 @@ import 'aos/dist/aos.css'; // استيراد أنماط AOS
 import trainingImage from '../../assets/pictur/4.webp';
 import academyImage from '../../assets/pictur/5.webp';
 import trainerImage from '../../assets/pictur/trainer.jpg';
+import { Link } from 'react-router-dom';
 
 
 
@@ -42,7 +43,7 @@ const ServiceSection = () => {
             <p className="service-card-description">
               Explore our diverse training courses tailored to boost your career.
             </p>
-            <button className="service-card-btn">Learn More</button>
+           <Link to="/Courses"> <button className="service-card-btn">Learn More</button></Link>
           </div>
           <div className="service-card">
             <img src={academyImage} alt="Academy Development" className="service-image" />

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-import './Sidebar.css';  // للـ CSS الخاص بالشريط الجانبي
+import './Sidebar.module.css';  // للـ CSS الخاص بالشريط الجانبي
 
 const Sidebar = () => {
   return (

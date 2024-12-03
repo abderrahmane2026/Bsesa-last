@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Createcategory.css"; // Import the CSS file
+import "./Createcategory.module.css"; // Import the CSS file
 import { refresh } from "../../Admin Dashboard/createblog/NewBlogPage";
 
 const CreateCategory = () => {

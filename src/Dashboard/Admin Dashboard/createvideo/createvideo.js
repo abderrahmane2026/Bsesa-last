@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
  // Import your CSS if available
-
+import "./createvideo.module.css"
 const AddVideoPage = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");

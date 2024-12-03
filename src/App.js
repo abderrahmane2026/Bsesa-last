@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Route, Routes ,useLocation} from 'react-router
 import Navbar from "./components/NavBare/Navbar"
 import HeroSection from './components/Hero/Hero';
 import ServiceSection from './components/ServicesSection/ServiseSection';
-import CoursesPage from './components/CourseSection/CourseSection';
-import BlogsPage from './components/BlogsSection/BlogSection';
+
+
 
 import ConferenceSection from './components/ConferencesSection/ConferencesSection';
 import SecssesSection from './components/Sucssessection/SecssesSection';
@@ -28,6 +28,13 @@ import NewBlogPage from './Dashboard/Admin Dashboard/createblog/NewBlogPage';
 import CreateVideoPage from './Dashboard/Admin Dashboard/createvideo/createvideo';
 import NewCourse from './Dashboard/Admin Dashboard/createCourse/CreateCourse';
 import NewConferencePage from './Dashboard/Admin Dashboard/Conference/CreateConferencepage';
+import BlogDetailPage from './pages/BlogsPage/BlogDetails/BlogDetailPage';
+import ActivationPage from './pages/ActivationPage/ActivationPage';
+import CoursesPage from './pages/CoursesPage/CoursesPage';
+import AccountPage from './Dashboard/User Dashboard/Account/account';
+import ConferenceDetails from './pages/Conference/ConferenceDetailPage/ConferenceDetailPage';
+import ConferencePage from './pages/Conference/ConferencePage/ConferencePage';
+import BlogsPage from './pages/BlogsPage/BlogsPage/BlogsPage';
 
 const App = () => {
   const location = useLocation();
@@ -44,13 +51,35 @@ const App = () => {
 
         <Route path="/" element={<Home />} />
         <Route path="/Aboutus" element={<AboutUsPage />} />
-        <Route path="/Login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/Conference" element={<ConferenceSection />} />
         <Route path="/Membership" element={<PricingSec />} />
-        {/* <Route path="/conference-details/:id" element={<ConferenceDetail />} /> */}
         
+        <Route path="/Login" element={<LoginPage />} />
+        {/* create account */}
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/activate_account/:token" element={<ActivationPage />} />
+
+{/* courses  */}
+        <Route path="/Courses" element={<CoursesPage />} />
+
+
+        {/* blogs */}
+        <Route path="/blog" element={<BlogsPage />} />
+        <Route path="/blog/:id" element={<BlogDetailPage />} /> 
+
+
+        
+        <Route path="/Conference" element={<ConferencePage />} />
+
+        
+        <Route path="/conference-details/:conferenceId" element={<ConferenceDetails />} />
+        
+
+
+        {/* User deashbord */}
+        <Route path="/account" element={<AccountPage />} />
+
+
+
 
          {/* مسارات الـ Admin */}
          <Route path="/admin" element={<AdminLayout />} >

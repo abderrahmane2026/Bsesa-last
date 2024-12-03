@@ -1,0 +1,81 @@
+/* BlogPage.css */
+
+/* الصفحة الرئيسية */
+.blogs-page {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  /* عنوان الصفحة */
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* تعريف صغير للصفحة */
+  .page-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  /* تنسيق البطاقات */
+  .blog-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  /* كل بطاقة */
+  .blog-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-5px); /* تحريك البطاقة قليلاً عند التمرير فوقها */
+  }
+  
+  /* صورة المدونة */
+  .blog-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* عنوان المدونة */
+  .blog-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 15px 0;
+  }
+  
+  /* زر "قراءة المزيد" */
+  .read-more-container {
+    margin-top: 10px;
+  }
+  
+  .read-more-button {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .read-more-button:hover {
+    background-color: #005f8d;
+  }
+  

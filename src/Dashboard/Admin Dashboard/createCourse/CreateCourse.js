@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./CreateCourse.module.css";
+import { refresh } from "../createblog/NewBlogPage"; // Assuming this is your token refresh function
 
 const CreateCourse = () => {
   const [title, setTitle] = useState("");
@@ -21,14 +23,34 @@ const CreateCourse = () => {
         setCategories(response.data.categorys); // تخزين الفئات
       } catch (error) {
         console.error("Error fetching categories:", error);
+        setMessage("Error fetching categories");
       }
     };
 
     fetchCategories();
   }, []);
 
+  // Form validation
+  const validateForm = () => {
+    if (!title || !description || !price || !categorys.length) {
+      setMessage("All fields are required.");
+      return false;
+    }
+
+    if (price <= 0) {
+      setMessage("Price must be a positive number.");
+      return false;
+    }
+
+    return true;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate form fields
+    if (!validateForm()) return;
+
     const formData = new FormData();
     formData.append("title", title);
     formData.append("categorys", JSON.stringify(categorys));
@@ -38,6 +60,10 @@ const CreateCourse = () => {
     formData.append("published", published); // إرسال قيمة الحقل "published"
 
     try {
+      // Check if token needs to be refreshed
+      const checkToken = await refresh();
+      if (!checkToken) throw new Error("You Must Login");
+
       const response = await axios.post("https://bsesa-backend-1.onrender.com/course/create", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
@@ -45,8 +71,16 @@ const CreateCourse = () => {
       const courseId = response.data.course._id; // استرجاع معرف الكورس
       setMessage("Course created successfully!");
       navigate(`/add-videos/${courseId}`); // التوجه إلى صفحة إضافة الفيديوهات
+
+      // Clear form state after successful submission
+      setTitle("");
+      setCategorys([]);
+      setDescription("");
+      setPrice("");
+      setThumbnail(null);
+      setPublished(false);
     } catch (error) {
-      setMessage(`Error: ${error.response?.data?.err}`);
+      setMessage(`Error: ${error.response?.data?.err || error.message}`);
     }
   };
 
@@ -108,6 +142,7 @@ const CreateCourse = () => {
               type="file"
               className="w-full text-gray-300"
               onChange={(e) => setThumbnail(e.target.files[0])}
+              required
             />
           </div>
           <div className="form-group">

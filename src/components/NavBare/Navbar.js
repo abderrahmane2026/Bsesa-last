@@ -50,7 +50,7 @@ const Navbar = () => {
             Services <FaChevronDown className="arrow-icon" />
           </Link>
           <div className="services-dropdown">
-            <div className="dropdown-item">Training Courses</div>
+          <Link to="/Courses">  <div className="dropdown-item">Training Courses</div></Link>
             <div className="dropdown-item">Academy Development</div>
             <div className="dropdown-item">Trainer Experience</div>
             <div className="dropdown-item">Team Experience</div>
@@ -63,8 +63,8 @@ const Navbar = () => {
           </Link>
           <div className="academic-dropdown">
             <div className="dropdown-item">Research</div>
-            <div className="dropdown-item">Articles</div>
-            <div className="dropdown-item">Scientific Conferences</div>
+           <Link to="/blog"> <div className="dropdown-item">Articles</div></Link>
+           <Link to="/Conference"> <div className="dropdown-item">Scientific Conferences</div></Link>
             <div className="dropdown-item">Lab Visit Service</div>
           </div>
         </li>

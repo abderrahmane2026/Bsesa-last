@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './CourseSection.css';  // Custom styles for the page
 
-const CoursesPage = () => {
+const CoursesSection = () => {
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -44,4 +44,4 @@ const CoursesPage = () => {
   );
 }
 
-export default CoursesPage;
+export default CoursesSection;

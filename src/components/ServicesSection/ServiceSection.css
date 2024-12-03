@@ -47,8 +47,8 @@
     padding: 20px;
     width: 30%;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.8s ease-in-out;
     position: relative; /* Position relative to control the bottom line */
   }
   

@@ -1,0 +1,103 @@
+/* Basic styles for the courses page */
+.courses-page {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f5f7fa;
+    min-height: 60vh;
+  }
+  
+  /* Page Title */
+  .page-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .page-description {
+    text-align: center;
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+  }
+  
+  /* Grid Layout for Course Cards */
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  /* Styling for Individual Course Cards */
+  .course-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Thumbnail for the Course */
+  .course-thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #2980b9;
+    transition: transform 0.3s ease;
+  }
+  
+  .course-thumbnail:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Title and Description */
+  .course-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #34495e;
+    padding: 20px;
+  }
+  
+  .course-description {
+    font-size: 16px;
+    color: #7f8c8d;
+    padding: 0 20px 20px 20px;
+  }
+  
+  /* Link to Course Details */
+  .course-link {
+    display: block;
+    text-align: center;
+    background-color: #2980b9;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0 0 12px 12px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .course-link:hover {
+    background-color: #1f5a72;
+  }
+  
+  /* Loading state */
+  .loading-state {
+    text-align: center;
+    font-size: 24px;
+    color: #555;
+    margin-top: 50px;
+    height: 100vh;
+  }
+  

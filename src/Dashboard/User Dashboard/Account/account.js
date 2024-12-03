@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './account.css';
-import { refresh } from '../../../Dashboard/Admin Dashboard/createblog/NewBlogPage';
+import { refresh } from '../../Admin Dashboard/createblog/NewBlogPage';
 
 const AccountPage = () => {
   const [user, setUser] = useState(null);

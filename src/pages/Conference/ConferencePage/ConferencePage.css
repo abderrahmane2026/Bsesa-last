@@ -1,0 +1,7 @@
+.conference-page{
+    min-height: 100vh;
+    padding: 50px;
+}
+.conference-page .page-title{
+    margin-bottom: 50px;
+}

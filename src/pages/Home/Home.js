@@ -6,6 +6,7 @@ import SecssesSection from '../../components/Sucssessection/SecssesSection';
 import BlogsPage from '../../components/BlogsSection/BlogSection';
 import ConferenceSection from '../../components/ConferencesSection/ConferencesSection';
 import TestSection from '../../components/testSction/Test';
+import ReviewSection from '../../components/reviewSection/reviewSection';
 function Home() {
 
   
@@ -19,7 +20,7 @@ function Home() {
       <BlogsPage/>
      <TestSection/>
       <ConferenceSection/>
-     
+     <ReviewSection/>
            </div> 
             
   );

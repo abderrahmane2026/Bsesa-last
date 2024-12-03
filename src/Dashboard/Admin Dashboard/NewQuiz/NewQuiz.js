@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Container, TextField, Button, Typography, Box, Paper, Radio, FormControlLabel } from "@mui/material";
 import { useStore } from "../../../Context/testzustand";
-import "./NewQuiz.css";  // استيراد ملف الـ CSS
+import "./NewQuiz.module.css";  // استيراد ملف الـ CSS
 import { refresh } from "../createblog/NewBlogPage";
 
 const NewQuizPage = () => {

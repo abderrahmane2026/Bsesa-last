@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Card, Row, Col, ProgressBar } from 'react-bootstrap';
 import { Line } from 'react-chartjs-2'; // استيراد الرسم البياني
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
-import './AdminDashboard.css';  // لكتابة الأنماط الخاصة بالصفحة
+import './AdminDashboard.module.css';  // لكتابة الأنماط الخاصة بالصفحة
 
 // تفعيل الإضافات المطلوبة لـ Chart.js
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);

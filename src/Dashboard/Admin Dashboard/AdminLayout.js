@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { Outlet } from 'react-router-dom';
-import './AdminLayout.css';  // ستايل للـ Layout
+import './AdminLayout.module.css';  // ستايل للـ Layout
 import Sidebar from './AdminSideBare';
 
 const AdminLayout = () => {
